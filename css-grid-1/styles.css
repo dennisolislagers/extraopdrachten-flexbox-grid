@@ -1,8 +1,8 @@
 .container {
     background-color: hsl(212, 36%, 90%);
     display: grid;
-    column-gap: 16px;
-    row-gap: 16px;
+    column-gap: 4px;
+    row-gap: 4px;
 
 
     grid-template-columns: repeat(6, 1fr);
@@ -13,6 +13,7 @@
         "item-5 item-5 item-5 item-5 item-5 item-5";
 }
 .item {
+    padding: 14px;
     background-color: hsl(212, 43%, 65%);
     border: 4px;
     color: hsl(212, 36%, 90%);
@@ -40,4 +41,17 @@
 
 #item-5 {
     grid-area: item-5;
+}
+
+@media screen and (max-width: 576px) {
+    .container {
+        grid-template-columns: 50px auto;
+        grid-template-rows: 4fr;
+        grid-template-areas:
+        "item-1 item-2"
+        "item-3 item-2"
+        "item-3 item-4"
+        "item-5 item-5";
+    }
+
 }
