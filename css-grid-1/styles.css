@@ -1,0 +1,43 @@
+.container {
+    background-color: hsl(212, 36%, 90%);
+    display: grid;
+    column-gap: 16px;
+    row-gap: 16px;
+
+
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 200px 400px 150px;
+    grid-template-areas:
+        "item-1 item-1 item-1 item-2 item-2 item-2"
+        "item-3 item-3 item-4 item-4 item-4 item-4"
+        "item-5 item-5 item-5 item-5 item-5 item-5";
+}
+.item {
+    background-color: hsl(212, 43%, 65%);
+    border: 4px;
+    color: hsl(212, 36%, 90%);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#item-1 {
+    grid-area: item-1;
+}
+
+#item-2 {
+    grid-area: item-2;
+}
+
+#item-3 {
+    grid-area: item-3;
+}
+
+#item-4 {
+    grid-area: item-4;
+}
+
+#item-5 {
+    grid-area: item-5;
+}
